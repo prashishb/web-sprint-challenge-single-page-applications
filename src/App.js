@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ValidationError } from 'yup';
 import Form from './components/Form';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -97,6 +96,7 @@ export default function App() {
   const formSubmit = () => {
     const newOrder = {
       name: formValues.name.trim(),
+      email: formValues.email.trim(),
       size: formValues.size,
       top1: formValues.top1,
       top2: formValues.top2,
@@ -121,8 +121,6 @@ export default function App() {
       setDisabled(!valid);
     });
   }, [formValues]);
-
-  console.log(order);
 
   return (
     <>

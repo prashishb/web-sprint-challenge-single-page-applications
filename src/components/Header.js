@@ -1,7 +1,5 @@
 import React from 'react';
-import { NavLink, Link, Route } from 'react-router-dom';
-import Home from '../components/Home';
-import Help from '../components/Help';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
   return (
