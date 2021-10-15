@@ -51,6 +51,7 @@ const initialFormErrors = {
   top12: false,
   top13: false,
   top14: false,
+  special: '',
 };
 
 // Initial Submit Order Button State
@@ -82,7 +83,6 @@ export default function App() {
   };
 
   // Event Handlers
-
   const validate = (name, value) => {
     yup
       .reach(schema, name)
@@ -115,10 +115,12 @@ export default function App() {
       top12: formValues.top12,
       top13: formValues.top13,
       top14: formValues.top14,
+      special: formValues.special,
     };
     postNewOrder(newOrder);
   };
 
+  // Side Effects
   useEffect(() => {
     schema.isValid(formValues).then((valid) => {
       setDisabled(!valid);
