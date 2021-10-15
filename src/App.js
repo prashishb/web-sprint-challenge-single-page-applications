@@ -66,19 +66,7 @@ export default function App() {
   const [order, setOrder] = useState(initialOrder);
   const [disabled, setDisabled] = useState(initialDisabled);
 
-  const validate = (name, value) => {
-    yup
-      .reach(schema, name)
-      .validate(value)
-      .then(() => setFormErrors({ ...formErrors, [name]: '' }))
-      .catch((err) => setFormErrors({ ...formErrors, [name]: err.errors[0] }));
-  };
-
-  const inputChange = (name, value) => {
-    validate(name, value);
-    setFormValues({ ...formValues, [name]: value });
-  };
-
+  // Helpers
   const postNewOrder = (newOrder) => {
     axios
       .post('https://reqres.in/api/orders', newOrder)
@@ -91,6 +79,21 @@ export default function App() {
       .finally(() => {
         setFormValues(initialFormValues);
       });
+  };
+
+  // Event Handlers
+
+  const validate = (name, value) => {
+    yup
+      .reach(schema, name)
+      .validate(value)
+      .then(() => setFormErrors({ ...formErrors, [name]: '' }))
+      .catch((err) => setFormErrors({ ...formErrors, [name]: err.errors[0] }));
+  };
+
+  const inputChange = (name, value) => {
+    validate(name, value);
+    setFormValues({ ...formValues, [name]: value });
   };
 
   const formSubmit = () => {
@@ -134,6 +137,7 @@ export default function App() {
             disabled={disabled}
             errors={formErrors}
             order={order}
+            key={order.id}
           />
         </Route>
         <Route path='/confirmation'>
