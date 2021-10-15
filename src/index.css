@@ -1,6 +1,8 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 *,
@@ -11,6 +13,7 @@ html {
 
 body {
   margin: 0;
+  font-size: 0.7rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -41,7 +44,6 @@ code {
 .header-nav a {
   text-decoration: none;
   border: 1px solid gray;
-  width: 100%;
   font-size: 2rem;
 }
 
@@ -52,6 +54,8 @@ code {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }
 
 .home-image {
@@ -72,7 +76,6 @@ code {
   overflow: hidden;
   width: 76.4%;
   margin: 0 auto;
-  padding: 2%;
 }
 
 .order-btn {
@@ -86,7 +89,7 @@ code {
 
 .form-container {
   margin: 1% auto;
-  width: 60%;
+  width: 90%;
   background-color: hsl(0, 0%, 100%);
   padding: 2%;
   border: 1px solid white;
@@ -110,7 +113,7 @@ input[type='email'],
 input[type='password'],
 select {
   width: 100%;
-  height: 3em;
+  height: 2.5em;
   border: 0.1em solid hsl(0, 0%, 87%);
   border-radius: 4px;
   text-indent: 0.5em;
@@ -157,4 +160,28 @@ button[disabled] {
 
 .confirmation-title {
   text-align: center;
+}
+
+.errors {
+  margin: 8px;
+  font-size: 1.2em;
+  color: red;
+}
+
+@media (min-width: 770px) {
+  body {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  select {
+    height: 3em;
+  }
+  .form-container {
+    width: 70%;
+  }
 }
