@@ -41,6 +41,7 @@ export default function Form(props) {
             Name:
             <input
               type='text'
+              id='name-input'
               name='name'
               values={values.name}
               onChange={onChange}
@@ -51,6 +52,7 @@ export default function Form(props) {
             Email:
             <input
               type='email'
+              id='email-input'
               name='email'
               values={values.email}
               onChange={onChange}

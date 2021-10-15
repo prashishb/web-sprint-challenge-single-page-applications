@@ -19,7 +19,7 @@ export default function Home() {
         <h2 className='hero-text'>
           Your favorite food, delivered while coding
         </h2>
-        <button onClick={routeToOrder} className='order-btn'>
+        <button onClick={routeToOrder} className='order-btn' id='order-pizza'>
           Order Now
         </button>
       </div>
