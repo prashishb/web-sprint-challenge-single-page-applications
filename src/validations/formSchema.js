@@ -6,10 +6,7 @@ const formSchema = yup.object().shape({
     .required('Please enter a name for the order')
     .min(2, 'name must be at least 2 characters'),
 
-  email: yup
-    .string()
-    .email('Email address must be valid')
-    .required('Email address required'),
+  email: yup.string().email('Email address must be valid'),
 
   size: yup.string().oneOf(['XL', 'L', 'M', 'S'], 'Please select a size'),
 

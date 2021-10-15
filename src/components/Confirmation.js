@@ -6,8 +6,6 @@ export default function Confirmation(props) {
   if (!order) {
     return <h3>Working fetching user order...</h3>;
   }
-
-  console.log(order);
   return (
     <div className='order-container'>
       <h1 className='confirmation-title'>
