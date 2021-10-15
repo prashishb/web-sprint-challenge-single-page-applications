@@ -161,6 +161,10 @@ button[disabled] {
   text-align: center;
 }
 
+.order-container {
+  text-align: center;
+}
+
 .errors {
   margin: 8px;
   font-size: 1.2em;

@@ -13,6 +13,10 @@ export default function Confirmation(props) {
       <h1 className='confirmation-title'>
         Congratulations Your Pizza is on it's way!
       </h1>
+      <img
+        src='https://giffiles.alphacoders.com/891/89192.gif'
+        alt='cat delivering pizza'
+      />
     </div>
   );
 }
