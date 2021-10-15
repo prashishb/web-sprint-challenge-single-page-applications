@@ -11,7 +11,7 @@ export default function Header() {
         <NavLink style={{ marginRight: 10 }} to='/'>
           Home
         </NavLink>
-        <NavLink to='/order'>Order</NavLink>
+        <NavLink to='/pizza'>Order</NavLink>
       </div>
     </div>
   );
